@@ -13,6 +13,7 @@ int main()
     int age = 30; 
     
     enum weekdays {Monday, Tuesday, Wednesday, Thursday, Friday};
+    enum weekdays tuesday = Tuesday;
     
     char myChar = 'A';
     
