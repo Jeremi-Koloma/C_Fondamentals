@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=JEREMI
-Date                   :=24/10/2025
+Date                   :=26/10/2025
 CodeLitePath           :="/Users/jeremi/Library/Application Support/CodeLite"
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -dynamiclib -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/Applications/codelite.app/Contents/SharedSupport/
-Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/dataTypes.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) 
 
 
 
@@ -91,6 +91,12 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/dataTypes.c$(ObjectSuffix): dataTypes.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/dataTypes.c$(ObjectSuffix) -MF$(IntermediateDirectory)/dataTypes.c$(DependSuffix) -MM dataTypes.c
+	$(CC) $(SourceSwitch) "/Users/jeremi/Documents/Worksapce1/ReadingInputs/dataTypes.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/dataTypes.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/dataTypes.c$(PreprocessSuffix): dataTypes.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/dataTypes.c$(PreprocessSuffix) dataTypes.c
+
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
 	$(CC) $(SourceSwitch) "/Users/jeremi/Documents/Worksapce1/ReadingInputs/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
