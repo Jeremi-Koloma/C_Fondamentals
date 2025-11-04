@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=ReadingInputs
+ProjectName            :=MinutesConvertion
 ConfigurationName      :=Debug
 WorkspacePath          :=/Users/jeremi/Documents/Worksapce1
-ProjectPath            :=/Users/jeremi/Documents/Worksapce1/ReadingInputs
+ProjectPath            :=/Users/jeremi/Documents/Worksapce1/MinutesConvertion
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="ReadingInputs.txt"
+ObjectsFileList        :="MinutesConvertion.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/Applications/codelite.app/Contents/SharedSupport/
-Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/dataTypes.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) 
 
 
 
@@ -93,15 +93,9 @@ PreBuild:
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
-	$(CC) $(SourceSwitch) "/Users/jeremi/Documents/Worksapce1/ReadingInputs/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/Users/jeremi/Documents/Worksapce1/MinutesConvertion/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
-
-$(IntermediateDirectory)/dataTypes.c$(ObjectSuffix): dataTypes.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/dataTypes.c$(ObjectSuffix) -MF$(IntermediateDirectory)/dataTypes.c$(DependSuffix) -MM dataTypes.c
-	$(CC) $(SourceSwitch) "/Users/jeremi/Documents/Worksapce1/ReadingInputs/dataTypes.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/dataTypes.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/dataTypes.c$(PreprocessSuffix): dataTypes.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/dataTypes.c$(PreprocessSuffix) dataTypes.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

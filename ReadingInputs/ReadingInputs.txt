@@ -1,1 +1,1 @@
-Debug/dataTypes.c.o Debug/main.c.o
+Debug/main.c.o Debug/dataTypes.c.o

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Worksapce1" Database="" Version="10000">
-  <Project Name="ReadingInputs" Path="ReadingInputs/ReadingInputs.project" Active="Yes"/>
+  <Project Name="ReadingInputs" Path="ReadingInputs/ReadingInputs.project" Active="No"/>
+  <Project Name="MinutesConvertion" Path="MinutesConvertion/MinutesConvertion.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="ReadingInputs" ConfigName="Debug"/>
+      <Project Name="MinutesConvertion" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="ReadingInputs" ConfigName="Release"/>
+      <Project Name="MinutesConvertion" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
